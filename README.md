@@ -93,9 +93,12 @@ movie-recommendation-sae/
 ├── models/
 │   └── trained_sae.pth              # Saved model weights
 │
-├── requirements.txt
-├── README.md
-└── LICENSE
+├── .gitignore                      # Git ignore file
+├── LICENSE                         # MIT License
+├── README.md                       # Project documentation
+├── main.py                         # Main execution script
+├── requirements.txt                # Python dependencies
+└── test_recommendations.py         # Testing script
 ```
 
 ## 🔧 Installation & Setup
@@ -145,38 +148,30 @@ user_ratings = torch.FloatTensor([...])  # User's rating vector
 recommendations = sae(user_ratings)
 ```
 
-### Running the Complete Analysis
+### Running the Project
 
 ```bash
+# Run the main script
+python main.py
+
+# Test recommendations
+python test_recommendations.py
+
 # Run the Jupyter notebook
-jupyter notebook notebooks/sae.ipynb
+jupyter notebook notebooks/
 ```
 
 ## 📈 Results & Performance
 
 ### Training Performance:
-- **Final Training Loss**: 0.9098 (RMSE)
-- **Test Loss**: 0.9499 (RMSE) 
-- **Training Epochs**: 200
-- **Convergence**: Smooth loss reduction with stable final performance
-
-## 📈 Training Results
-
 ✅ **Model Successfully Trained!**
 - **Training completed**: 200 epochs
-- **Final test loss**: ~0.91 RMSE
+- **Final Training Loss**: 0.9098 (RMSE)
+- **Test Loss**: 0.9499 (RMSE) 
 - **Model saved**: `models/best_sae_model.pth`
 - **Dataset**: 750,122 training + 250,089 test ratings
+- **Convergence**: Smooth loss reduction with stable final performance
 
-### Quick Results:
-```python
-# Load and test the trained model
-from src.trainer import SAEExperiment
-
-experiment = SAEExperiment()
-experiment.load_model("best_sae_model.pth")
-# Model ready for recommendations! 
-```
 ### Model Insights:
 1. **Dimensionality Reduction**: Successfully compressed 1682 movie features to 10 latent dimensions
 2. **Pattern Recognition**: Learned complex user preference patterns and movie similarities
@@ -187,6 +182,16 @@ experiment.load_model("best_sae_model.pth")
 - **Feature Compression Ratio**: 168:1 (1682 → 10 dimensions)
 - **Prediction Accuracy**: ~95% correlation with actual ratings
 - **Training Stability**: Consistent loss reduction over 200 epochs
+
+### Quick Results:
+```python
+# Load and test the trained model
+from src.trainer import SAEExperiment
+
+experiment = SAEExperiment()
+experiment.load_model("best_sae_model.pth")
+# Model ready for recommendations! 
+```
 
 ## 🔍 Methodology
 
