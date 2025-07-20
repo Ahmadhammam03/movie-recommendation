@@ -1,4 +1,3 @@
-# In your notebook or as a script
 from src.trainer import SAEExperiment
 
 # Initialize experiment  
