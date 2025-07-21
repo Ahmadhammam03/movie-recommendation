@@ -4,6 +4,7 @@
 ![PyTorch](https://img.shields.io/badge/PyTorch-1.9+-red.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 ![Deep Learning](https://img.shields.io/badge/Deep%20Learning-AutoEncoders-orange.svg)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue.svg)](https://www.linkedin.com/in/ahmad-hammam-1561212b2)
 
 ## 🎯 Project Overview
 
